@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\TodoList;
 use Illuminate\Http\Request;
 
 class homepageController extends Controller
@@ -12,10 +13,7 @@ class homepageController extends Controller
 
    public function index(){
         return view('welcome', [
-            'title' => 'Todo List',
-            'description' => 'This is a simple todo list app made with Laravel',
-            'author' => 'Rafael',
-            'date' => '2021-03-01'
+            "Todos"=> TodoList::all()
         ]);
 
     }
