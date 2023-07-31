@@ -32,8 +32,13 @@
                         </div>
 
                     </form>
-
-
+                    @foreach ($Todos as $item)
+                        <h2>{{$item->title}}</h2>
+                        <p>{{$item->description}}</p>
+                        <span>{{$item->status}}</span>
+                        
+                    @endforeach
+                        
 
                  
                 </div>
